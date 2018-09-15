@@ -1,0 +1,7 @@
+!URxvt.font: xft:monaco:size=10
+URxvt*font: xft:DejaVu Sans Mono for Powerline:pixelsize=20
+!URxvt.letterSpace: -5
+URxvt.colorUL: #4682B4
+URxvt.scrollBar: false
+URxvt*background: Black
+URxvt*foreground: White
