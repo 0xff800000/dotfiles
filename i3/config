@@ -65,6 +65,9 @@ client.unfocused        $c_black_d    $c_background    $c_black_l    $c_black_d
 client.urgent           $c_red_d  $c_magenta_l  $c_black_l    $c_magenta_l
 client.background $c_background
 
+# Nautilus 
+bindsym $mod+Shift+n exec --no-startup-id nautilus --no-desktop
+
 # Xfce-panel
 bindsym $mod+x exec --no-startup-id xfce4-panel --disable-wm-check
 bindsym $mod+Shift+x exec pkill xfce4-panel
