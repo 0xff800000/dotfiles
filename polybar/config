@@ -52,13 +52,13 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-0 = "DejaVu Sans:pixelsize=10;1"
+font-1 = "Unifont:fontformat=truetype:size=8:antialias=false;0"
+font-2 = "Wuncon siji:pixelsize=10;1"
 
-modules-left = bspwm i3
+modules-left = i3
 modules-center = mpd
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -222,7 +222,7 @@ format = <label> <ramp-coreload>
 ;   %percentage% (default) - total cpu load
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
-label = CPU %percentage%%
+label = CPU %percentage%
 
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
@@ -239,7 +239,7 @@ interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
-label = %percentage_used%%
+label = RAM %percentage_used%%
 
 [module/wlan]
 type = internal/network
@@ -299,7 +299,7 @@ label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-
+$(expand -t 2 <(fortune -s))
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}

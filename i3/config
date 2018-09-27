@@ -15,6 +15,9 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:monospace 8
 
+# Load gnome settings 
+exec --no-startup-id /usr/lib/gsd-xsettings
+
 # Set wallpaper
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpaper/*
 
@@ -87,7 +90,7 @@ bindsym $mod+Return exec gnome-terminal --window-with-profile=NoScrollbar
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -nb black -sb tomato -l 5
+bindsym $mod+d exec dmenu_run -nb black -sb green -sf blue -l 5
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -95,6 +98,7 @@ bindsym $mod+d exec dmenu_run -nb black -sb tomato -l 5
 
 # start firefox
 bindsym $mod+Shift+f exec firefox
+#for_window [instance="firefox"] move container to workspace 3 
 
 # start ranger
 bindsym $mod+Shift+w exec gnome-terminal -e ranger
@@ -114,8 +118,11 @@ bindcode 232 exec "xbacklight -2"
 # wifi settings
 bindsym $mod+F8 exec nm-connection-editor
 
+# Lock screen
+bindsym $mod+l exec --no-startup-id ~/dotfiles/i3lock/lock
+
 # Power
-bindsym $mod+BackSpace exec systemctl suspend
+bindsym $mod+BackSpace exec ~/dotfiles/i3lock/lock && systemctl suspend
 bindsym $mod+Delete exec shutdown 0
 bindsym Control+Shift+Esc exec gnome-terminal -e htop
 
@@ -128,10 +135,10 @@ bindsym $mod+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move
 #bindsym $mod+Shift+u exec --no-startup-id st -n dropdown
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+eacute focus right
+#bindsym $mod+j focus left
+#bindsym $mod+k focus down
+#bindsym $mod+l focus up
+#bindsym $mod+eacute focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
