@@ -10,6 +10,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $term gnome-terminal --window-with-profile=NoScrollbar
+set $term_exec gnome-terminal --window-with-profile=NoScrollbar -e
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -69,7 +71,7 @@ client.urgent           $c_red_d  $c_magenta_l  $c_black_l    $c_magenta_l
 client.background $c_background
 
 # Nautilus 
-bindsym $mod+Shift+n exec --no-startup-id nautilus --no-desktop
+bindsym $mod+Shift+n exec --no-startup-id nautilus --browser
 
 # Xfce-panel
 bindsym $mod+x exec --no-startup-id xfce4-panel --disable-wm-check
@@ -84,7 +86,7 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec gnome-terminal --window-with-profile=NoScrollbar 
+bindsym $mod+Return exec $term 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -97,14 +99,15 @@ bindsym $mod+d exec dmenu_run -nb black -sb green -sf blue -l 5
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # start firefox
-bindsym $mod+Shift+f exec firefox
-#for_window [instance="firefox"] move container to workspace 3 
+#bindsym $mod+Shift+f exec --no-startup-id i3-msg "workspace 1;exec gnome-terminal"
+bindsym $mod+Shift+f exec --no-startup-id dotfiles/i3/start_firefox.sh 
+#for_window [instance="Firefox"] move container to workspace 3 
 
 # start ranger
-bindsym $mod+Shift+w exec gnome-terminal -e ranger
+bindsym $mod+Shift+w exec $term_exec ranger
 
 # start htop
-bindsym Control+Shift+Escape exec gnome-terminal -e htop
+bindsym Control+Shift+Escape exec $term_exec htop
 
 # sound manager
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
@@ -117,6 +120,7 @@ bindcode 232 exec "xbacklight -2"
 
 # wifi settings
 bindsym $mod+F8 exec nm-connection-editor
+bindsym $mod+Shift+F8 exec $term_exec 'sudo wifi-menu'
 
 # Lock screen
 bindsym $mod+l exec --no-startup-id ~/dotfiles/i3lock/lock
@@ -124,7 +128,7 @@ bindsym $mod+l exec --no-startup-id ~/dotfiles/i3lock/lock
 # Power
 bindsym $mod+BackSpace exec ~/dotfiles/i3lock/lock && systemctl suspend
 bindsym $mod+Delete exec shutdown 0
-bindsym Control+Shift+Esc exec gnome-terminal -e htop
+#bindsym Control+Shift+Esc exec gnome-terminal -e htop
 
 # Dropdown terminal
 for_window [instance="dropdown"] floating enable
