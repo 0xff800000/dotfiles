@@ -86,6 +86,13 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+alias vi="vim"
+alias r="ranger"
 alias zshconfig="vi ~/.zshrc"
+alias zshreload="source ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vimconfig="vi ~/.vimrc"
 alias i3config="vi ~/.config/i3/config"
+alias polybarconfig="vi ~/.config/polybar/config"
+export EDITOR=vim
+

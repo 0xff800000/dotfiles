@@ -1,6 +1,6 @@
 #!/bin/bash
 
-choice=$(echo -e "Shutdown\nSuspend\nLock\nCancel" | dmenu)
+choice=$(echo -e "Suspend\nLock\nShutdown\nCancel" | dmenu)
 
 if [ $choice == "Shutdown" ]; then
 	shutdown 0
