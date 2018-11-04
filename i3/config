@@ -10,8 +10,10 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $term gnome-terminal --window-with-profile=NoScrollbar
-set $term_exec gnome-terminal --window-with-profile=NoScrollbar -e
+#set $term gnome-terminal --window-with-profile=NoScrollbar
+set $term terminator 
+#set $term_exec gnome-terminal --window-with-profile=NoScrollbar -e
+set $term_exec terminator -e
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -19,6 +21,9 @@ font pango:monospace 8
 
 # Load gnome settings 
 exec --no-startup-id /usr/lib/gsd-xsettings
+
+# Load fr_CH keys
+exec --no-startup-id setxkbmap -layout ch -variant fr 
 
 # Set wallpaper
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpaper/*
@@ -57,14 +62,15 @@ set $c_cyan_d #689d6a
 set $c_green_l #b8bb26
 set $c_foreground #ebdbb2
 set $c_white_d #dbae93
-set $c_green_d #98971a
+set $c_green_d #23f702 
+#set $c_green_d #98971a
 set $c_yellow_d #d79921
 set $c_cursor #fff000
 set $c_white_l #fbf1c7
 set $c_black_l #665c54
 
 #class                  background?   border        text          split
-client.focused          $c_black_l    $c_white_l    $c_black_l    $c_white_d
+client.focused          $c_black_l    $c_green_d    $c_black_l    $c_white_d
 client.focused_inactive $c_black_d    $c_background    $c_black_l    $c_black_d
 client.unfocused        $c_black_d    $c_background    $c_black_l    $c_black_d
 client.urgent           $c_red_d  $c_magenta_l  $c_black_l    $c_magenta_l
@@ -127,7 +133,7 @@ bindsym $mod+l exec --no-startup-id ~/dotfiles/i3lock/lock
 
 # Power
 bindsym $mod+BackSpace exec ~/dotfiles/i3lock/lock && systemctl suspend
-bindsym $mod+Delete exec ~/dotfiles/i3lock/power_menu.sh 
+bindsym $mod+Delete exec shutdown 0
 #bindsym Control+Shift+Esc exec gnome-terminal -e htop
 
 # Dropdown terminal
@@ -135,10 +141,8 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 625 400
 for_window [instance="dropdown"] move scratchpad
 exec --no-startup-id st -n dropdown
-#exec --no-startup-id $term --name dropdown
 bindsym $mod+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
-bindsym $mod+Shift+F12 exec --no-startup-id st -n dropdown
-#bindsym $mod+Shift+m exec --no-startup-id $term --name dropdown
+#bindsym $mod+Shift+u exec --no-startup-id st -n dropdown
 
 # change focus
 #bindsym $mod+j focus left
@@ -237,28 +241,28 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym eacute resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
+#mode "resize" {
+#        # These bindings trigger as soon as you enter the resize mode
+#
+#        # Pressing left will shrink the window’s width.
+#        # Pressing right will grow the window’s width.
+#        # Pressing up will shrink the window’s height.
+#        # Pressing down will grow the window’s height.
+#        bindsym j resize shrink width 10 px or 10 ppt
+#        bindsym k resize grow height 10 px or 10 ppt
+#        bindsym l resize shrink height 10 px or 10 ppt
+#        bindsym eacute resize grow width 10 px or 10 ppt
+#
+#        # same bindings, but for the arrow keys
+#        bindsym Left resize shrink width 10 px or 10 ppt
+#        bindsym Down resize grow height 10 px or 10 ppt
+#        bindsym Up resize shrink height 10 px or 10 ppt
+#        bindsym Right resize grow width 10 px or 10 ppt
+#
+#        # back to normal: Enter or Escape
+#        bindsym Return mode "default"
+#        bindsym Escape mode "default"
+#}
 
 bindsym $mod+r mode "resize"
 
