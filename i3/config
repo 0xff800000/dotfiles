@@ -137,12 +137,19 @@ bindsym $mod+Delete exec shutdown 0
 #bindsym Control+Shift+Esc exec gnome-terminal -e htop
 
 # Dropdown terminal
-for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 625 400
-for_window [instance="dropdown"] move scratchpad
-exec --no-startup-id st -n dropdown
-bindsym $mod+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
+#for_window [instance="dropdown"] floating enable
+#for_window [instance="dropdown"] resize set 625 400
+#for_window [instance="dropdown"] move scratchpad
+#exec --no-startup-id st -n dropdown
+#bindsym $mod+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
 #bindsym $mod+Shift+u exec --no-startup-id st -n dropdown
+
+# Dropdown terminal terminator
+for_window [title="dropdown"] floating enable
+for_window [title="dropdown"] resize set 625 400
+for_window [title="dropdown"] move scratchpad
+exec --no-startup-id $term -T dropdown
+bindsym $mod+u [title="dropdown"] scratchpad show; [title="dropdown"] move position center
 
 # change focus
 #bindsym $mod+j focus left
