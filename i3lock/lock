@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 scr='/tmp/screenshot.png'
-icon=~/dotfiles/i3lock/lock-icon.png
+icon=~/setup/dotfiles/i3lock/lock-icon.png
 # To change the font used add `-font $font`
 # After pointsize in the 'add fortune text section'
 # font="$HOME/.local/share/fonts/Aller_Lt.ttf"
