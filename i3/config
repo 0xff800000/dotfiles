@@ -126,8 +126,8 @@ bindcode 233 exec "xbacklight +2"
 bindcode 232 exec "xbacklight -2"
 
 # Night lights
-bindsym $mod+m exec --no-startup-id redshift -t 6500k:2000k -l 0:0 
-bindsym $mod+Shift+m exec --no-startup-id pkill redshift 
+bindsym $mod+m exec --no-startup-id redshift -P -O 2000k 
+bindsym $mod+Shift+m exec --no-startup-id redshift -P -O 6500k
 
 # wifi settings
 bindsym $mod+F8 exec nm-connection-editor
