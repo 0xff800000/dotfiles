@@ -87,7 +87,8 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias vi="vim"
-alias r="ranger"
+#alias r="ranger"
+alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias zshconfig="vi ~/.zshrc"
 alias zshreload="source ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
