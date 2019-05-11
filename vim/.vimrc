@@ -134,5 +134,37 @@ if has('langmap') && exists('+langremap')
   set nolangremap
 endif
 
+"########## Custom settings ##########"
+
 " Enable lines numbers "
 set number
+
+" Set tab size "
+set tabstop=4
+
+" Color theme "
+color slate
+
+"########## Custom keymaps ##########"
+
+" New tab "
+map <C-N> :tabe <CR>
+map <C-M> :q <CR>
+
+" Switch tabs "
+map <C-H> gT
+imap <C-H> gT
+map <C-L> gt
+imap <C-L> gt
+
+" Find word under cursor "
+nnoremap <C-f><C-f> /<C-r><C-w><CR>
+inoremap <C-f><C-f> <Esc>/<C-r><C-w><CR>
+
+" Find & replace under cursor "
+nnoremap <C-d><C-d> :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
+inoremap <C-d><C-d> <Esc>:%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
+
+" Explore "
+nnoremap <C-e> :Explore<CR>
+
