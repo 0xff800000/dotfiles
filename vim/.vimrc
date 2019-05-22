@@ -137,7 +137,8 @@ endif
 "########## Custom settings ##########"
 
 " Enable lines numbers "
-set number
+set nu! rnu!
+"set number
 
 " Set tab size "
 set tabstop=4
@@ -149,13 +150,13 @@ color slate
 
 " New tab "
 map <C-N> :tabe <CR>
-map <C-M> :q <CR>
+"map <C-M> :q <CR>
 
 " Switch tabs "
 map <C-H> gT
-imap <C-H> gT
+imap <C-H> <Esc>gT
 map <C-L> gt
-imap <C-L> gt
+imap <C-L> <Esc>gt
 
 " Find word under cursor "
 nnoremap <C-f><C-f> /<C-r><C-w><CR>
@@ -165,6 +166,14 @@ inoremap <C-f><C-f> <Esc>/<C-r><C-w><CR>
 nnoremap <C-d><C-d> :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 inoremap <C-d><C-d> <Esc>:%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 
+" Find & replace under cursor (confirm) "
+nnoremap <C-d><C-k> :%s/\<<C-r><C-w>\>/<C-r><C-w>/c<Left><Left>
+inoremap <C-d><C-k> <Esc>:%s/\<<C-r><C-w>\>/<C-r><C-w>/c<Left><Left>
+
+" Find & replace under cursor (line only) "
+nnoremap <C-d><C-l> :s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
+inoremap <C-d><C-l> <Esc>:s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
+
 " Explore "
-nnoremap <C-e> :Explore<CR>
+nnoremap <C-e> :Explore<CR>:set rnu!<CR>
 
