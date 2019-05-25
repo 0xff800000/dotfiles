@@ -146,7 +146,26 @@ set tabstop=4
 " Color theme "
 color slate
 
+" Fuzzy search "
+" This set the search to recursive
+set path+=**
+
+" netrw options "
+let g:netrw_altv=1    " open splits to the right
+"let g:netrw_banner=0    " disable banner
+"let g:netrw_liststyle=3    " tree view
+
+"########## Text object ##########"
+
+" Line
+nmap cil 0c$
+nmap dil 0d$
+
 "########## Custom keymaps ##########"
+
+" Move line
+nmap mj :m++<CR>
+nmap mk :m--<CR>
 
 " New tab "
 map <C-N> :tabe <CR>
@@ -159,8 +178,8 @@ map <C-L> gt
 imap <C-L> <Esc>gt
 
 " Find word under cursor "
-nnoremap <C-f><C-f> /<C-r><C-w><CR>
-inoremap <C-f><C-f> <Esc>/<C-r><C-w><CR>
+nnoremap <C-d><C-f> /<C-r><C-w><CR>
+inoremap <C-d><C-f> <Esc>/<C-r><C-w><CR>
 
 " Find & replace under cursor "
 nnoremap <C-d><C-d> :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
