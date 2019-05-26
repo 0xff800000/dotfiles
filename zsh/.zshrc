@@ -10,9 +10,10 @@ HISTFILE=~/.zsh_history
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="amuse"
+#ZSH_THEME="amuse"
 #ZSH_THEME="agnoster"
 #ZSH_THEME="bira"
+ZSH_THEME="mybira"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -95,5 +96,6 @@ alias zshreload="source ~/.zshrc"
 alias vimconfig="vi ~/.vimrc"
 alias i3config="vi ~/.config/i3/config"
 alias polybarconfig="vi ~/.config/polybar/config"
+alias changebg="feh --randomize --bg-fill ~/Pictures/wallpaper/*"
 export EDITOR=vim
 
