@@ -30,7 +30,7 @@ exec --no-startup-id setxkbmap -layout ch -variant fr
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpaper/*
 
 # Configure gaps
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 gaps inner 10
 gaps outer 10
 bindsym $mod+g gaps inner current plus 5
@@ -111,7 +111,7 @@ bindsym $mod+Shift+f exec --no-startup-id ~/setup/dotfiles/i3/start_firefox.sh
 #for_window [instance="Firefox"] move container to workspace 3 
 
 # start ranger
-bindsym $mod+Shift+w exec $term_exec ranger
+#bindsym $mod+Shift+w exec $term_exec ranger
 
 # start htop
 bindsym Control+Shift+Escape exec $term_exec htop
@@ -134,7 +134,7 @@ bindsym $mod+F8 exec nm-connection-editor
 bindsym $mod+Shift+F8 exec $term_exec 'sudo wifi-menu'
 
 # Lock screen
-bindsym $mod+l exec --no-startup-id ~/setup/dotfiles/i3lock/lock
+bindsym $mod+c exec --no-startup-id ~/setup/dotfiles/i3lock/lock
 
 # Power
 bindsym $mod+BackSpace exec ~/setup/dotfiles/i3lock/lock && systemctl suspend
@@ -156,10 +156,10 @@ exec --no-startup-id $term -T dropdown
 bindsym $mod+u [title="dropdown"] scratchpad show; [title="dropdown"] move position center
 
 # change focus
-#bindsym $mod+j focus left
-#bindsym $mod+k focus down
-#bindsym $mod+l focus up
-#bindsym $mod+eacute focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -186,7 +186,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+z split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -212,16 +212,16 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace 1 
+bindsym $mod+2 workspace 2 
+bindsym $mod+3 workspace 3 
+bindsym $mod+4 workspace 4 
+bindsym $mod+5 workspace 5 
+bindsym $mod+6 workspace 6 
+bindsym $mod+7 workspace 7 
+bindsym $mod+8 workspace 8 
+bindsym $mod+9 workspace 9 
+bindsym $mod+0 workspace 10 
 
 
 # cylce through workspaces

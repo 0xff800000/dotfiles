@@ -196,3 +196,12 @@ inoremap <C-d><C-l> <Esc>:s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 " Explore "
 nnoremap <C-e> :Explore<CR>:set rnu!<CR>
 
+
+" ########## Plugins ##########"
+" Easymotion
+set runtimepath^=~/.vim/bundle/vim-easymotion/
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+nmap s <Plug>(easymotion-overwin-f)
+
+" Tabular
+set runtimepath^=~/.vim/bundle/tabular/
