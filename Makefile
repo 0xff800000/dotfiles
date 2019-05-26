@@ -23,7 +23,7 @@ zsh_upload:
 
 zsh_download:
 	cp zsh/.zshrc ~/
-	cp ~/.oh-my-zsh/themes/mybira.zsh-theme zsh/theme/
+	cp zsh/theme/* ~/.oh-my-zsh/themes/mybira.zsh-theme
 
 i3_upload: 
 	cp ~/.config/i3/* i3/
