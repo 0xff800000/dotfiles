@@ -178,20 +178,20 @@ map <C-L> gt
 imap <C-L> <Esc>gt
 
 " Find word under cursor "
-nnoremap <C-d><C-f> /<C-r><C-w><CR>
-inoremap <C-d><C-f> <Esc>/<C-r><C-w><CR>
+nnoremap <C-i><C-f> /<C-r><C-w><CR>
+inoremap <C-i><C-f> <Esc>/<C-r><C-w><CR>
 
 " Find & replace under cursor "
-nnoremap <C-d><C-d> :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
-inoremap <C-d><C-d> <Esc>:%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
+nnoremap <C-i><C-d> :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
+inoremap <C-i><C-d> <Esc>:%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 
 " Find & replace under cursor (confirm) "
-nnoremap <C-d><C-k> :%s/\<<C-r><C-w>\>/<C-r><C-w>/c<Left><Left>
-inoremap <C-d><C-k> <Esc>:%s/\<<C-r><C-w>\>/<C-r><C-w>/c<Left><Left>
+nnoremap <C-i><C-k> :%s/\<<C-r><C-w>\>/<C-r><C-w>/c<Left><Left>
+inoremap <C-i><C-k> <Esc>:%s/\<<C-r><C-w>\>/<C-r><C-w>/c<Left><Left>
 
 " Find & replace under cursor (line only) "
-nnoremap <C-d><C-l> :s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
-inoremap <C-d><C-l> <Esc>:s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
+nnoremap <C-i><C-l> :s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
+inoremap <C-i><C-l> <Esc>:s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 
 " Explore "
 nnoremap <C-e> :Explore<CR>:set rnu!<CR>
