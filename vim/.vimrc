@@ -137,7 +137,7 @@ endif
 "########## Custom settings ##########"
 
 " Enable lines numbers "
-set nu! rnu!
+set nu rnu
 "set number
 
 " Set tab size "
@@ -154,6 +154,13 @@ set path+=**
 let g:netrw_altv=1    " open splits to the right
 "let g:netrw_banner=0    " disable banner
 "let g:netrw_liststyle=3    " tree view
+
+" Highlight chars
+set showbreak=↪\ 
+set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+
+" Search ignore case
+set ignorecase
 
 "########## Text object ##########"
 
