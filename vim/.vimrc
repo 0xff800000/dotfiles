@@ -169,6 +169,8 @@ nmap cil 0c$
 nmap dil 0d$
 
 "########## Custom keymaps ##########"
+" Show list
+nmap <leader>. :set list!<CR>
 
 " Move line
 nmap mj :m++<CR>
@@ -185,20 +187,20 @@ map <C-L> gt
 imap <C-L> <Esc>gt
 
 " Find word under cursor "
-nnoremap <C-i><C-f> /<C-r><C-w><CR>
-inoremap <C-i><C-f> <Esc>/<C-r><C-w><CR>
+nnoremap <C-f><C-f> /<C-r><C-w><CR>
+inoremap <C-f><C-f> <Esc>/<C-r><C-w><CR>
 
 " Find & replace under cursor "
-nnoremap <C-i><C-d> :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
-inoremap <C-i><C-d> <Esc>:%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
+nnoremap <C-f><C-d> :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
+inoremap <C-f><C-d> <Esc>:%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 
 " Find & replace under cursor (confirm) "
-nnoremap <C-i><C-k> :%s/\<<C-r><C-w>\>/<C-r><C-w>/c<Left><Left>
-inoremap <C-i><C-k> <Esc>:%s/\<<C-r><C-w>\>/<C-r><C-w>/c<Left><Left>
+nnoremap <C-f><C-k> :%s/\<<C-r><C-w>\>/<C-r><C-w>/c<Left><Left>
+inoremap <C-f><C-k> <Esc>:%s/\<<C-r><C-w>\>/<C-r><C-w>/c<Left><Left>
 
 " Find & replace under cursor (line only) "
-nnoremap <C-i><C-l> :s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
-inoremap <C-i><C-l> <Esc>:s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
+nnoremap <C-f><C-l> :s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
+inoremap <C-f><C-l> <Esc>:s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 
 " Explore "
 nnoremap <C-e> :Explore<CR>:set rnu!<CR>
@@ -209,6 +211,7 @@ nnoremap <C-e> :Explore<CR>:set rnu!<CR>
 set runtimepath^=~/.vim/bundle/vim-easymotion/
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 nmap s <Plug>(easymotion-overwin-f)
+vmap s <Plug>(easymotion-s)
 
 " Tabular
 set runtimepath^=~/.vim/bundle/tabular/
