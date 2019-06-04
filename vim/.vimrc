@@ -8,6 +8,9 @@
 " Individual settings can be reverted with ":set option&".
 " Other commands can be reverted as mentioned below.
 
+" Set leader char
+let mapleader = " "
+
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
   finish
@@ -161,6 +164,11 @@ set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 
 " Search ignore case
 set ignorecase
+
+" Tabs
+set tabstop=8
+set shiftwidth=2
+set expandtab
 
 "########## Text object ##########"
 
