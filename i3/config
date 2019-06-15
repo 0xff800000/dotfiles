@@ -31,8 +31,8 @@ exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpaper/*
 
 # Configure gaps
 for_window [class="^.*"] border pixel 0
-gaps inner 10
-gaps outer 10
+gaps inner 40
+gaps outer 0
 bindsym $mod+g gaps inner current plus 5
 bindsym $mod+Shift+g gaps inner current minus 5
 bindsym $mod+b gaps outer current plus 5
@@ -53,7 +53,7 @@ set $c_red_l #fb4934
 set $c_blue_l #83a598
 set $c_blue_d #458588
 set $c_magenta_d #b16286
-set $c_black_d #1d2021
+set $c_black_d #000000
 set $c_cyan_l #8ec07c
 set $c_magenta_l #d3869b
 set $c_yellow_l #fabd2f
@@ -70,11 +70,11 @@ set $c_cursor #fff000
 set $c_white_l #fbf1c7
 set $c_black_l #665c54
 
-#class                  background?   border        text          split
-client.focused          $c_black_l    $c_green_d    $c_black_l    $c_white_d
-client.focused_inactive $c_black_d    $c_background    $c_black_l    $c_black_d
-client.unfocused        $c_black_d    $c_background    $c_black_l    $c_black_d
-client.urgent           $c_red_d  $c_magenta_l  $c_black_l    $c_magenta_l
+#class                    background?   border          text         split
+client.focused            $c_black_l    $c_black_d      $c_white_l   $c_white_d
+client.focused_inactive   $c_black_d    $c_background   $c_white_l   $c_black_d
+client.unfocused          $c_black_d    $c_background   $c_white_l   $c_black_d
+client.urgent             $c_red_d      $c_magenta_l    $c_black_l   $c_magenta_l
 client.background $c_background
 
 # Nautilus 
@@ -175,10 +175,10 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # Resize focused window
-bindsym $mod+Shift+z resize shrink width 10 px or 10 ppt
-bindsym $mod+Shift+u resize shrink height 10 px or 10 ppt
-bindsym $mod+Shift+i resize grow height 10 px or 10 ppt
-bindsym $mod+Shift+o resize grow width 10 px or 10 ppt
+bindsym $mod+Shift+o resize shrink width 5 px or 5 ppt
+bindsym $mod+Shift+i resize shrink height 5 px or 5 ppt
+bindsym $mod+Shift+u resize grow height 5 px or 5 ppt
+bindsym $mod+Shift+z resize grow width 5 px or 5 ppt
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
