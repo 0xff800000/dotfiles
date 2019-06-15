@@ -30,7 +30,7 @@ exec --no-startup-id setxkbmap -layout ch -variant fr
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpaper/*
 
 # Configure gaps
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 gaps inner 10
 gaps outer 10
 bindsym $mod+g gaps inner current plus 5
@@ -85,7 +85,8 @@ bindsym $mod+x exec --no-startup-id xfce4-panel --disable-wm-check
 bindsym $mod+Shift+x exec pkill xfce4-panel
 
 # Manage transparency 
-bindsym $mod+p exec --no-startup-id compton
+exec --no-startup-id compton --blur-background --config ~/setup/dotfiles/compton.conf
+bindsym $mod+p exec --no-startup-id compton --blur-background --config ~/setup/dotfiles/compton.conf
 bindsym $mod+Shift+p exec pkill compton 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
