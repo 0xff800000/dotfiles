@@ -30,3 +30,15 @@ i3_upload:
 
 i3_download:
 	cp i3/* ~/.config/i3/ 
+
+polybar_upload: 
+	cp ~/.config/polybar/* polybar/
+
+polybar_download:
+	cp polybar/* ~/.config/polybar/ 
+
+ranger_upload: 
+	cp ~/.config/ranger/* ranger/
+
+ranger_download:
+	cp ranger/* ~/.config/ranger/ 
