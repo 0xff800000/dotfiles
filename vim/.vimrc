@@ -145,6 +145,7 @@ set nu rnu
 
 " Set tab size "
 set tabstop=4
+set shiftwidth=2
 
 " Color theme "
 color slate
@@ -177,11 +178,18 @@ nmap cil 0c$
 nmap dil 0d$
 
 "########## Custom keymaps ##########"
-" Show list
-nmap <leader>. :set list!<CR>
+" Alt-Space = Esc
+inoremap <M-Space> <Esc>
 
-" Move line
-nmap mj :m++<CR>
+" Redo last ex command
+nmap § :<Up><CR>
+vmap § :<Up><CR>
+
+" Show list
+nmap <leader>. :set list!<cr>
+
+" move line
+nmap mj :m++<cr>
 nmap mk :m--<CR>
 
 " New tab "
@@ -193,6 +201,10 @@ map <C-H> gT
 imap <C-H> <Esc>gT
 map <C-L> gt
 imap <C-L> <Esc>gt
+
+" Find word under cursor "
+nnoremap <C-f><C-g> :s/<C-r><C-w>/<C-r><C-w><CR>
+inoremap <C-f><C-g> <Esc>:s/<C-r><C-w>/<C-r><C-w><CR>
 
 " Find word under cursor "
 nnoremap <C-f><C-f> /<C-r><C-w><CR>
@@ -223,3 +235,16 @@ vmap s <Plug>(easymotion-s)
 
 " Tabular
 set runtimepath^=~/.vim/bundle/tabular/
+
+" SnipMate
+set runtimepath^=~/.vim/bundle/tlib_vim/
+set runtimepath^=~/.vim/bundle/vim-snipmate/
+set runtimepath^=~/.vim/bundle/vim-addon-mw-utils/
+set runtimepath^=~/.vim/bundle/vim-snippets/
+imap <Tab> <Plug>snipMateNextOrTrigger
+smap <Tab> <Plug>snipMateNextOrTrigger
+imap <S-Tab> <Plug>snipMateBack
+smap <S-Tab> <Plug>snipMateBack
+
+" TODO
+" change <C-e> to open explore
