@@ -144,8 +144,9 @@ set nu rnu
 "set number
 
 " Set tab size "
-set tabstop=4
-set shiftwidth=2
+"set tabstop=4
+"set shiftwidth=2
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " Color theme "
 color slate
@@ -223,7 +224,42 @@ nnoremap <C-f><C-l> :s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 inoremap <C-f><C-l> <Esc>:s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 
 " Explore "
-nnoremap <C-e> :Explore<CR>:set rnu!<CR>
+"nnoremap <Leader>t :Explore<CR>:set rnu!<CR>
+augroup netrw_mapping
+    autocmd!
+    autocmd filetype netrw call NetrwMapping()
+augroup END
+
+function! NetrwMapping()
+    "nnoremap <buffer> <Leader>s s " Remap <Leader>s to sort (not working)
+    nmap <buffer> s <Plug>(easymotion-overwin-f)
+    nmap <buffer> l <CR>
+endfunction
+
+let g:NetrwIsOpen=0
+function! ToggleNetrw()
+    if g:NetrwIsOpen
+        let g:NetrwIsOpen=0
+        let i = bufnr("$")
+        while (i >= 1)
+            if (getbufvar(i, "&filetype") == "netrw")
+                silent exe "bwipeout " . i
+            endif
+            let i-=1
+        endwhile
+    else
+        let g:NetrwIsOpen=1
+        silent Lexplore
+    endif
+endfunction
+
+nnoremap <silent> <Leader>t :call ToggleNetrw()<CR>
+
+" Change buffer
+nnoremap è <C-^>
+
+" List buffers
+nnoremap <Leader>l :ls<CR>
 
 
 " ########## Plugins ##########"
