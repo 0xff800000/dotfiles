@@ -167,15 +167,19 @@ set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 " Search ignore case
 set ignorecase
 
+" Undo levels
+set undolevels=999999
+
 " Tabs
-set tabstop=8
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
+set ai
 
 "########## Text object ##########"
 
 " Line
-nmap cil 0c$
+nmap cil 1c$
 nmap dil 0d$
 
 "########## Custom keymaps ##########"
@@ -253,7 +257,9 @@ function! ToggleNetrw()
     endif
 endfunction
 
-nnoremap <silent> <Leader>t :call ToggleNetrw()<CR>
+set runtimepath^=~/.vim/bundle/nerdtree/
+"nnoremap <silent> <Leader>t :call ToggleNetrw()<CR>
+nnoremap <silent> <Leader>t :NERDTreeToggle<CR>
 
 " Change buffer
 nnoremap è <C-^>
