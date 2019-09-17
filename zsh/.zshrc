@@ -2,7 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/d01000100/.oh-my-zsh
+#export ZSH=/home/d01000100/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 HISTFILE=~/.zsh_history
 
 
@@ -92,6 +93,7 @@ alias vi="vim"
 alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias zshconfig="vi ~/.zshrc"
 alias zshreload="source ~/.zshrc"
+alias zshuncorrupt="~/setup/dotfiles/zsh/uncorrupt_hist.sh"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vimconfig="vi ~/.vimrc"
 alias i3config="vi ~/.config/i3/config"
