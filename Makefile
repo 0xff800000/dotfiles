@@ -42,3 +42,6 @@ ranger_upload:
 
 ranger_download:
 	cp ranger/* ~/.config/ranger/ 
+
+ranger_download_old:
+	cp ranger/rc-1.8.conf ~/.config/ranger/rc.conf
