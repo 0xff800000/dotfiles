@@ -45,3 +45,9 @@ ranger_download:
 
 ranger_download_old:
 	cp ranger/rc-1.8.conf ~/.config/ranger/rc.conf
+
+tmux_download:
+	cp tmux/.tmux.conf ~/
+
+tmux_upload:
+	cp ~/.tmux.conf tmux/.tmux.conf
