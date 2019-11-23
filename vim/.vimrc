@@ -149,7 +149,8 @@ set nu rnu
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " Color theme "
-color slate
+"color slate
+colorscheme delek
 
 " Fuzzy search "
 " This set the search to recursive
@@ -206,6 +207,12 @@ map <C-H> gT
 imap <C-H> <Esc>gT
 map <C-L> gt
 imap <C-L> <Esc>gt
+
+" Switch tabs order "
+nmap <C-j> :tabmove -1<CR>
+imap <C-j> <Esc>:tabmove -1<CR>
+nmap <C-k> :tabmove +1<CR>
+imap <C-k> <Esc>:tabmove +1<CR>
 
 " Find word under cursor "
 nnoremap <C-f><C-g> :s/<C-r><C-w>/<C-r><C-w><CR>
