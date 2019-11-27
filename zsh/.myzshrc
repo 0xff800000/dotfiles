@@ -1,5 +1,9 @@
 # Luke's config for the Zoomer Shell
 
+# History
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=50000
+
 autoload -U colors && colors
 #PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 if [[ $UID -eq 0 ]]; then
