@@ -274,6 +274,12 @@ nnoremap è <C-^>
 " List buffers
 nnoremap <Leader>l :ls<CR>
 
+" Grep
+" http://learnvimscriptthehardway.stevelosh.com/chapters/32.html
+nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen<cr>
+
+" Highlight search
+nnoremap <leader>, :set hlsearch!<CR>
 
 " ########## Plugins ##########"
 " Easymotion
@@ -281,6 +287,10 @@ set runtimepath^=~/.vim/bundle/vim-easymotion/
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 nmap s <Plug>(easymotion-overwin-f)
 vmap s <Plug>(easymotion-s)
+nmap é <Plug>(easymotion-overwin-f2)
+vmap é <Plug>(easymotion-overwin-f2)
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
 
 " Tabular
 set runtimepath^=~/.vim/bundle/tabular/
@@ -295,5 +305,5 @@ smap <Tab> <Plug>snipMateNextOrTrigger
 imap <S-Tab> <Plug>snipMateBack
 smap <S-Tab> <Plug>snipMateBack
 
-" TODO
-" change <C-e> to open explore
+" FZF
+nnoremap <Leader>f :FZF<CR>

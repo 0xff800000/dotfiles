@@ -13,7 +13,7 @@ else
     local user_host="%B%{$fg[red]%}%m %{$fg[blue]%}%~ "
     local user_symbol='$'
 fi
-PROMPT="╭─ ${user_host}%{$fg[magenta]%}%*%{$reset_color%}
+PROMPT="╭─  ${user_host}%{$fg[magenta]%}%*%{$reset_color%}
 ╰─%B${user_symbol}%b "
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
