@@ -1,8 +1,9 @@
 # Luke's config for the Zoomer Shell
 
 # History
-HISTFILE="$HOME/.zsh_history"
-HISTSIZE=50000
+SAVEHIST=50000
+HISTFILE=~/.zsh_history
+setopt share_history
 
 autoload -U colors && colors
 #PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
