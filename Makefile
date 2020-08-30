@@ -17,6 +17,9 @@ vim_upload:
 vim_download:
 	cp vim/.vimrc ~/
 
+vim_link:
+	ln -sf ~/setup/dotfiles/vim/.vimrc ~/
+
 zsh_upload: 
 	cp ~/.zshrc zsh/
 	cp ~/.oh-my-zsh/themes/mybira.zsh-theme zsh/theme/
@@ -24,6 +27,9 @@ zsh_upload:
 zsh_download:
 	cp zsh/.zshrc ~/
 	cp zsh/theme/* ~/.oh-my-zsh/themes/mybira.zsh-theme
+
+zsh_link:
+	ln -sf ~/setup/dotfiles/zsh/.myzshrc ~/.zshrc
 
 i3_upload: 
 	cp ~/.config/i3/* i3/
