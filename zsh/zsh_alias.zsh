@@ -8,10 +8,15 @@ alias tmuxconfig="vi ~/.tmux.conf"
 alias tmuxreload="tmux source-file ~/.tmux.conf"
 alias zshconfig="vi ~/.zshrc"
 alias zshreload="source ~/.zshrc"
+alias zshalias="vi ~/setup/dotfiles/zsh/zsh_alias.zsh"
 alias vimconfig="vi ~/.vimrc"
 alias i3config="vi ~/.config/i3/config"
 alias polybarconfig="vi ~/.config/polybar/config"
 alias changebg="feh --randomize --bg-fill ~/Pictures/wallpaper/*"
+
+# WSL open file
+alias wsls="powershell.exe Start "
+
 # Git log override pretty graph
 git() {
     if [[ $@ == "log" ]]; then
