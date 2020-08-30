@@ -4,6 +4,8 @@ alias ls="ls --color=auto"
 alias l="ls"
 alias ll="ls -la"
 alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias tmuxconfig="vi ~/.tmux.conf"
+alias tmuxreload="tmux source-file ~/.tmux.conf"
 alias zshconfig="vi ~/.zshrc"
 alias zshreload="source ~/.zshrc"
 alias vimconfig="vi ~/.vimrc"
