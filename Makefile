@@ -57,3 +57,6 @@ tmux_download:
 
 tmux_upload:
 	cp ~/.tmux.conf tmux/.tmux.conf
+
+tmux_link:
+	ln -sf ~/setup/dotfiles/tmux/.tmux.conf ~/
