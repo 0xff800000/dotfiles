@@ -4,7 +4,18 @@ HISTFILE=~/.zsh_history
 setopt share_history
 
 autoload -U colors && colors
-#PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+
+# Git functions
+#source ~/setup/dotfiles/zsh/zsh_git.zsh
+autoload -Uz vcs_info
+zstyle ':vcs_info:git*' formats "- (%b) %u"
+precmd() {
+    vcs_info
+}
+
+# Enable substitution in the prompt.
+setopt prompt_subst
+
 if [[ $UID -eq 0 ]]; then
     local user_host="%B%{$fg[red]%}%m %{$fg[red]%}%~ "
     local user_symbol='#'
@@ -12,8 +23,10 @@ else
     local user_host="%B%{$fg[red]%}%m %{$fg[blue]%}%~ "
     local user_symbol='$'
 fi
-PROMPT="╭─  ${user_host}%{$fg[magenta]%}%*%{$reset_color%}
-╰─%B${user_symbol}%b "
+PROMPT='╭─  ${user_host}%{$fg[magenta]%}%* %{$fg[green]%}${vcs_info_msg_0_}%{$reset_color%}
+╰─%B${user_symbol}%b '
+#PROMPT="╭─  ${user_host}%{$fg[magenta]%}%*%{$reset_color%}
+#╰─%B${user_symbol}%b "
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 RPS1="%B${return_code}%b"
