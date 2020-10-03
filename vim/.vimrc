@@ -281,6 +281,9 @@ nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) 
 " Highlight search
 nnoremap <leader>, :set hlsearch!<CR>
 
+" Terminal escape
+tnoremap <A-é> <C-\><C-n>
+
 " ########## Plugins ##########"
 " Easymotion
 set runtimepath^=~/.vim/bundle/vim-easymotion/
@@ -307,3 +310,7 @@ smap <S-Tab> <Plug>snipMateBack
 
 " FZF
 nnoremap <Leader>f :FZF<CR>
+
+" RG
+"set grepprg=rg\ --vimgrep\ --smart-case\ --hidden\ --follow
+"command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)

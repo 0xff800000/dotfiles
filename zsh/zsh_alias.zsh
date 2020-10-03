@@ -16,3 +16,10 @@ alias changebg="feh --randomize --bg-fill ~/Pictures/wallpaper/*"
 
 # WSL open file
 alias wsls="powershell.exe Start "
+
+# git
+alias gs="git status"
+
+# dotfiles
+alias dots="cd ~/setup/dotfiles"
+
