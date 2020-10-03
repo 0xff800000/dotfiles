@@ -1,5 +1,6 @@
 # History
 SAVEHIST=50000
+HISTSIZE=50000
 HISTFILE=~/.zsh_history
 setopt share_history
 
