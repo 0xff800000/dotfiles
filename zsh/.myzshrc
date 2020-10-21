@@ -1,10 +1,45 @@
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
+
+# Option section
+setopt correct # Auto correct mistakes
+setopt extendedglob # Extended globbing. Allow using regular expressions with *
+setopt nocaseglob # Case insensitive globbing
+setopt nobeep # No beep
+setopt appendhistory # Append history instead of overwriting
+setopt histignorealldups # Remove duplicate
+setopt autocd # cd in directory if only path entered
+
+# Tab completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' rehash true
+
+# Speed up completions
+zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
 # History
 SAVEHIST=50000
 HISTSIZE=50000
 HISTFILE=~/.zsh_history
 setopt share_history
 
-autoload -U colors && colors
+#autoload -U colors && colors
+autoload -U compinit colors zcalc
+compinit -d
+colors
+
+# Color man pages
+export LESS_TERMCAP_mb=$'\E[01;32m'
+export LESS_TERMCAP_md=$'\E[01;32m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;47;34m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;36m'
+export LESS=-r
 
 # Git functions
 #source ~/setup/dotfiles/zsh/zsh_git.zsh
