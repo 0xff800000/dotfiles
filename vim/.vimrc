@@ -310,6 +310,9 @@ smap <S-Tab> <Plug>snipMateBack
 
 " FZF
 nnoremap <Leader>f :FZF<CR>
+if isdirectory($HOME . "/.fzf")
+    set runtimepath^=~/.fzf
+endif
 
 " RG
 "set grepprg=rg\ --vimgrep\ --smart-case\ --hidden\ --follow
