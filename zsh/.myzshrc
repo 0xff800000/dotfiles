@@ -1,5 +1,13 @@
-export EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/vim
+if ! command -v nvim &> /dev/null
+then
+    export EDITOR=$(which vim)
+    export VISUAL=$(which vim)
+else
+    export EDITOR=$(which nvim)
+    export VISUAL=$(which nvim)
+    alias vim=nvim
+    alias vi=nvim
+fi
 
 # Option section
 setopt correct # Auto correct mistakes
