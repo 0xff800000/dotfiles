@@ -1,0 +1,78 @@
+#if __has_include(".extend.Xresources")
+#include ".extend.Xresources"
+#endif
+
+! ^ The above lines are no comments!
+! Leave them as they are if a file ~/.extend.Xresources is being used on your system.
+! config can be added there or also here below.
+! For comments use "!"
+
+
+! special
+*.foreground:   #ababab
+*.background:   #000000
+*.cursorColor:  #ababab
+
+! black
+*.color0:       #000000
+*.color8:       #343434
+
+! red
+*.color1:       #e92f2f
+*.color9:       #e92f2f
+
+! green
+*.color2:       #0ed839
+*.color10:      #0ed839
+
+! yellow
+*.color3:       #dddd13
+*.color11:      #dddd13
+
+! blue
+*.color4:       #3b48e3
+*.color12:      #3b48e3
+
+! magenta
+*.color5:       #f996e2
+*.color13:      #f996e2
+
+! cyan
+*.color6:       #23edda
+*.color14:      #23edda
+
+! white
+*.color7:       #ababab
+
+
+!! URxvt Appearance
+URxvt.font: xft:DejaVu Sans Mono:xft:DejaVu Sans Mono for Powerline-9:size=12:antialias=true:hinting=true
+URxvt.boldFont: xft:DejaVu Sans Mono:xft:DejaVu Sans Mono for Powerline-9::style=Bold:size=12:antialias=true:hinting=true
+URxvt.italicFont: xft:DejaVu Sans Mono:xft:DejaVu Sans Mono for Powerline-9:style=Oblique:size=12:antialias=true:hinting=true
+URxvt.boldItalicfont: xft:DejaVu Sans Mono:xft:DejaVu Sans Mono for Powerline-9:style=Bold Oblique:size=12:antialias=true:hinting=true
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 92x24
+URxvt.internalBorder: 24
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvdepth: 24
+URxvt.iso14755: false
+
+!! Copy Paste & Other Extensions
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.urlLauncher: firefox
+URxvt.underlineURLs: true
+URxvt.urlButton: 1

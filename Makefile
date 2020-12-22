@@ -49,6 +49,9 @@ ranger_upload:
 ranger_download:
 	cp ranger/* ~/.config/ranger/ 
 
+ranger_link:
+	ln -sf ranger/ ~/.config/ranger/ 
+
 ranger_download_old:
 	cp ranger/rc-1.8.conf ~/.config/ranger/rc.conf
 
@@ -60,3 +63,6 @@ tmux_upload:
 
 tmux_link:
 	ln -sf ~/setup/dotfiles/tmux/.tmux.conf ~/
+
+urxvt_link:
+	ln -sf ~/setup/dotfiles/.Xresources ~/
