@@ -37,6 +37,9 @@ i3_upload:
 i3_download:
 	cp i3/* ~/.config/i3/ 
 
+i3_link:
+	ln -sf ~/setup/dotfiles/i3/ ~/.config/i3
+
 polybar_upload: 
 	cp ~/.config/polybar/* polybar/
 
@@ -50,7 +53,7 @@ ranger_download:
 	cp ranger/* ~/.config/ranger/ 
 
 ranger_link:
-	ln -sf ranger/ ~/.config/ranger/ 
+	ln -sf ~/setup/dotfiles/ranger ~/.config/ranger 
 
 ranger_download_old:
 	cp ranger/rc-1.8.conf ~/.config/ranger/rc.conf

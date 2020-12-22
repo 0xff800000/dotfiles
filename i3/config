@@ -12,8 +12,10 @@
 set $mod Mod4
 #set $term gnome-terminal --window-with-profile=NoScrollbar
 #set $term_exec gnome-terminal --window-with-profile=NoScrollbar -e
-set $term terminator 
-set $term_exec terminator -e
+#set $term terminator 
+#set $term_exec terminator -e
+set $term urxvt 
+set $term_exec urxvt -e
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -30,7 +32,7 @@ exec --no-startup-id setxkbmap -layout ch -variant fr
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpaper/*
 
 # Configure gaps
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 gaps inner 40
 gaps outer 0
 bindsym $mod+g gaps inner current plus 5
@@ -54,7 +56,7 @@ set $c_blue_l #83a598
 set $c_blue_d #458588
 set $c_magenta_d #b16286
 set $c_black_d #000000
-set $c_cyan_l #8ec07c
+set $c_cyan_l #
 set $c_magenta_l #d3869b
 set $c_yellow_l #fabd2f
 set $c_red_d #cc241d
@@ -71,7 +73,7 @@ set $c_white_l #fbf1c7
 set $c_black_l #665c54
 
 #class                    background?   border          text         split
-client.focused            $c_black_l    $c_black_d      $c_white_l   $c_white_d
+client.focused            $c_black_l    $c_white_l      $c_white_l   $c_white_d
 client.focused_inactive   $c_black_d    $c_background   $c_white_l   $c_black_d
 client.unfocused          $c_black_d    $c_background   $c_white_l   $c_black_d
 client.urgent             $c_red_d      $c_magenta_l    $c_black_l   $c_magenta_l
