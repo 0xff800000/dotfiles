@@ -50,7 +50,7 @@ export LESS_TERMCAP_us=$'\E[01;36m'
 export LESS=-r
 
 # Git functions
-#source ~/setup/dotfiles/zsh/zsh_git.zsh
+source ~/setup/dotfiles/zsh/zsh_git.zsh
 autoload -Uz vcs_info
 zstyle ':vcs_info:git*' formats "- (%b) %u"
 precmd() {
