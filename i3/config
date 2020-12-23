@@ -71,9 +71,10 @@ set $c_yellow_d #d79921
 set $c_cursor #fff000
 set $c_white_l #fbf1c7
 set $c_black_l #665c54
+set $c_grey_l #7f7f7f
 
 #class                    background?   border          text         split
-client.focused            $c_black_l    $c_white_l      $c_white_l   $c_white_d
+client.focused            $c_black_l    $c_grey_l      $c_white_l   $c_white_d
 client.focused_inactive   $c_black_d    $c_background   $c_white_l   $c_black_d
 client.unfocused          $c_black_d    $c_background   $c_white_l   $c_black_d
 client.urgent             $c_red_d      $c_magenta_l    $c_black_l   $c_magenta_l

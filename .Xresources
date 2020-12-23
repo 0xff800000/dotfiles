@@ -64,6 +64,9 @@ URxvt.urgentOnBell: true
 URxvdepth: 24
 URxvt.iso14755: false
 
+urxvt*depth: 32
+urxvt*background: rgba:0000/0000/0000/cf00
+
 !! Copy Paste & Other Extensions
 URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
 URxvt.copyCommand: xclip -i -selection clipboard
