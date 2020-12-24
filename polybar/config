@@ -304,7 +304,7 @@ label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-$(expand -t 2 <(fortune -s))
+;$(expand -t 2 <(fortune -s))
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}

@@ -46,6 +46,9 @@ polybar_upload:
 polybar_download:
 	cp polybar/* ~/.config/polybar/ 
 
+polybar_link:
+	ln -sf ~/setup/dotfiles/polybar ~/.config/polybar
+
 ranger_upload: 
 	cp ~/.config/ranger/* ranger/
 
