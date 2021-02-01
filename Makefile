@@ -72,3 +72,7 @@ tmux_link:
 
 urxvt_link:
 	ln -sf ~/setup/dotfiles/.Xresources ~/
+
+gtk_link:
+	ln -sf ~/setup/dotfiles/gtk/settings.ini /etc/gtk-3.0/settings.ini
+	ln -sf ~/setup/dotfiles/gtk/settings.ini /etc/gtk-2.0/gtkrc

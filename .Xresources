@@ -47,11 +47,11 @@
 
 
 !! URxvt Appearance
-URxvt.font: xft:DejaVu Sans Mono:xft:DejaVu Sans Mono for Powerline-9:size=10:antialias=true:hinting=true
-URxvt.boldFont: xft:DejaVu Sans Mono:xft:DejaVu Sans Mono for Powerline-9::style=Bold:size=10:antialias=true:hinting=true
-URxvt.italicFont: xft:DejaVu Sans Mono:xft:DejaVu Sans Mono for Powerline-9:style=Oblique:size=10:antialias=true:hinting=true
-URxvt.boldItalicfont: xft:DejaVu Sans Mono:xft:DejaVu Sans Mono for Powerline-9:style=Bold Oblique:size=10:antialias=true:hinting=true
-URxvt.letterSpace: 0
+URxvt.font: xft:DejaVu Sans Mono:xft:DejaVu Sans Mono for Powerline-9:size=15:antialias=true:hinting=true
+URxvt.boldFont: xft:DejaVu Sans Mono:xft:DejaVu Sans Mono for Powerline-9::style=Bold:size=15:antialias=true:hinting=true
+URxvt.italicFont: xft:DejaVu Sans Mono:xft:DejaVu Sans Mono for Powerline-9:style=Oblique:size=15:antialias=true:hinting=true
+URxvt.boldItalicfont: xft:DejaVu Sans Mono:xft:DejaVu Sans Mono for Powerline-9:style=Bold Oblique:size=15:antialias=true:hinting=true
+URxvt.letterSpace: -1
 URxvt.lineSpace: 0
 URxvt.geometry: 92x24
 URxvt.internalBorder: 24
