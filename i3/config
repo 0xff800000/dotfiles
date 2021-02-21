@@ -157,7 +157,7 @@ bindsym $mod+Delete exec ~/setup/dotfiles/i3lock/power_menu.sh
 for_window [title="dropdown"] floating enable
 for_window [title="dropdown"] resize set 625 400
 for_window [title="dropdown"] move scratchpad
-exec --no-startup-id $term -T dropdown
+exec --no-startup-id xrdb ~/.Xressources; $term -T dropdown
 bindsym $mod+u [title="dropdown"] scratchpad show; [title="dropdown"] move position center
 
 # change focus
