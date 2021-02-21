@@ -299,14 +299,14 @@ let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
 set runtimepath^=~/.vim/bundle/tabular/
 
 " SnipMate
-set runtimepath^=~/.vim/bundle/tlib_vim/
-set runtimepath^=~/.vim/bundle/vim-snipmate/
-set runtimepath^=~/.vim/bundle/vim-addon-mw-utils/
-set runtimepath^=~/.vim/bundle/vim-snippets/
-imap <Tab> <Plug>snipMateNextOrTrigger
-smap <Tab> <Plug>snipMateNextOrTrigger
-imap <S-Tab> <Plug>snipMateBack
-smap <S-Tab> <Plug>snipMateBack
+"set runtimepath^=~/.vim/bundle/tlib_vim/
+"set runtimepath^=~/.vim/bundle/vim-snipmate/
+"set runtimepath^=~/.vim/bundle/vim-addon-mw-utils/
+"set runtimepath^=~/.vim/bundle/vim-snippets/
+"imap <Tab> <Plug>snipMateNextOrTrigger
+"smap <Tab> <Plug>snipMateNextOrTrigger
+"imap <S-Tab> <Plug>snipMateBack
+"smap <S-Tab> <Plug>snipMateBack
 
 " FZF
 nnoremap <Leader>f :FZF<CR>

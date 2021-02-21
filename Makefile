@@ -20,6 +20,10 @@ vim_download:
 vim_link:
 	ln -sf ~/setup/dotfiles/vim/.vimrc ~/
 
+nvim_link:
+	mkdir ~/.config/nvim
+	ln -s ~/.vimrc ~/.config/nvim/init.vim
+
 zsh_upload: 
 	cp ~/.zshrc zsh/
 	cp ~/.oh-my-zsh/themes/mybira.zsh-theme zsh/theme/
