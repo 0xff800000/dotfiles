@@ -60,7 +60,7 @@ ranger_download:
 	cp ranger/* ~/.config/ranger/ 
 
 ranger_link:
-	ln -sf ~/setup/dotfiles/ranger ~/.config/ranger 
+	ln -sf ~/setup/dotfiles/ranger ~/.config
 
 ranger_download_old:
 	cp ranger/rc-1.8.conf ~/.config/ranger/rc.conf
