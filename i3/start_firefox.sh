@@ -1,3 +1,3 @@
 #!/bin/bash
 
-i3-msg workspace 3;exec firefox
+i3-msg workspace 3;env GTK_THEME=Arc:Darker firefox
