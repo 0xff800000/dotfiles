@@ -177,6 +177,10 @@ set shiftwidth=4
 set expandtab
 set ai
 
+" Tags
+set tagbsearch
+set tagcase=match
+
 "########## Text object ##########"
 
 " Line
