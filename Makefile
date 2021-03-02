@@ -43,6 +43,7 @@ i3_download:
 
 i3_link:
 	ln -sf ~/setup/dotfiles/i3 ~/.config/i3
+	ln -sf ~/setup/dotfiles/i3/.xinitrc ~/
 
 polybar_upload: 
 	cp ~/.config/polybar/* polybar/
