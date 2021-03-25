@@ -122,6 +122,8 @@ echo -ne '\e[5 q'
 # Use beam shape cursor for each new prompt.
 preexec() { echo -ne '\e[5 q' ;}
 
+source ~/setup/dotfiles/zsh/directories.zsh
+
 # Load fzf file
 [ -f "/usr/share/fzf/key-bindings.zsh" ] && source ~/setup/dotfiles/fzf/key-bindings.zsh 
 [ -f "/usr/share/fzf/completion.zsh"   ] && source "/usr/share/fzf/completion.zsh"   
