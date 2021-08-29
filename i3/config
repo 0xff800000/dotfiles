@@ -29,8 +29,6 @@ exec --no-startup-id /usr/lib/gsd-xsettings
 # Load fr_CH keys
 exec --no-startup-id setxkbmap -layout ch -variant fr 
 
-# Set wallpaper
-exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpaper/*
 
 # Configure gaps
 for_window [class="^.*"] border pixel 1
@@ -80,6 +78,27 @@ client.focused_inactive   $c_black_d    $c_background   $c_white_l   $c_black_d
 client.unfocused          $c_black_d    $c_background   $c_white_l   $c_black_d
 client.urgent             $c_red_d      $c_magenta_l    $c_black_l   $c_magenta_l
 client.background $c_background
+
+# Configure workspaces
+set $monitor1 DP-2
+set $monitor2 HDMI-0
+
+exec xrandr --output $monitor1 --primary
+exec xrandr --output $monitor2 --right-of $monitor1
+
+workspace 1 output $monitor1
+workspace 2 output $monitor1
+workspace 3 output $monitor1
+workspace 4 output $monitor1
+workspace 5 output $monitor1
+workspace 6 output $monitor2
+workspace 7 output $monitor2
+workspace 8 output $monitor2
+workspace 9 output $monitor2
+workspace 10 output $monitor2
+
+# Set wallpaper
+exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpaper/*
 
 # Nautilus 
 bindsym $mod+Shift+n exec --no-startup-id nautilus --browser
