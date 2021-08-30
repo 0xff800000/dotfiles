@@ -158,7 +158,8 @@ bindsym $mod+F8 exec nm-connection-editor
 bindsym $mod+Shift+F8 exec $term_exec 'sudo wifi-menu'
 
 # Lock screen
-bindsym $mod+c exec --no-startup-id ~/setup/dotfiles/i3lock/lock
+#bindsym $mod+c exec --no-startup-id ~/setup/dotfiles/i3lock/lock
+bindsym $mod+c exec --no-startup-id i3lock-fancy
 
 # Power
 bindsym $mod+BackSpace exec ~/setup/dotfiles/i3lock/lock && systemctl suspend
