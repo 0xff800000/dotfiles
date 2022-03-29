@@ -162,7 +162,8 @@ bindsym $mod+Shift+F8 exec $term_exec 'sudo wifi-menu'
 bindsym $mod+c exec --no-startup-id i3lock-fancy
 
 # Power
-bindsym $mod+BackSpace exec ~/setup/dotfiles/i3lock/lock && systemctl suspend
+#bindsym $mod+BackSpace exec ~/setup/dotfiles/i3lock/lock && systemctl suspend
+bindsym $mod+BackSpace exec i3lock-fancy && systemctl suspend
 bindsym $mod+Delete exec ~/setup/dotfiles/i3lock/power_menu.sh 
 #bindsym Control+Shift+Esc exec gnome-terminal -e htop
 
