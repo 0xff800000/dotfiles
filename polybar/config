@@ -37,6 +37,7 @@ height = 20
 ;offset-y = 1%
 radius = 6.0
 fixed-center = false
+dpi = 100
 
 ;background = ${colors.background}
 ;foreground = ${colors.foreground}

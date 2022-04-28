@@ -80,7 +80,7 @@ client.urgent             $c_red_d      $c_magenta_l    $c_black_l   $c_magenta_
 client.background $c_background
 
 # Configure workspaces
-set $monitor1 DP-2
+set $monitor1 DP-4
 set $monitor2 HDMI-0
 
 exec xrandr --output $monitor1 --primary

@@ -7,6 +7,8 @@
 ! config can be added there or also here below.
 ! For comments use "!"
 
+Xft.dpi: 100
+
 
 ! special
 *.foreground:   #ffffff
