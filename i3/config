@@ -18,6 +18,9 @@ exec --no-startup-id xrdb ~/.Xresources
 set $term urxvt 
 set $term_exec urxvt -e
 
+focus_follows_mouse no
+smart_borders on
+hide_edge_borders smart
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -32,7 +35,7 @@ exec --no-startup-id setxkbmap -layout ch -variant fr
 
 # Configure gaps
 for_window [class="^.*"] border pixel 1
-gaps inner 40
+gaps inner 10
 gaps outer 0
 bindsym $mod+g gaps inner current plus 5
 bindsym $mod+Shift+g gaps inner current minus 5
