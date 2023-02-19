@@ -150,7 +150,7 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " Color theme "
 "color slate
-colorscheme ron
+colorscheme default
 
 " Fuzzy search "
 " This set the search to recursive
